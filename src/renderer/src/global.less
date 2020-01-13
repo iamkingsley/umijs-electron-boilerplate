@@ -1,0 +1,76 @@
+
+@import '~antd/dist/antd.css';
+@import "./common/styles/theme.less";
+@import "./common/styles/layout.less";
+@import "./common/styles/table.less";
+@import "./common/styles/form.less";
+
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+
+/*
+@font-face {
+    font-family: SEGOEUI;
+    src: url(/fonts/SEGOEUI.TTF);
+}
+
+@font-face {
+    font-family: SEGOEUI;
+    src: url(/fonts/SEGOEUI.TTF);
+} */
+
+@font-face {
+    font-family: "SourceSansProExtraLight";
+    src: url("/fonts/ssp/SourceSansPro-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: "SourceSansProRegular";
+    src: url("/fonts/ssp/SourceSansPro-Regular.otf");
+}
+
+.mainContent {
+    padding: 32px 64px;
+    background: @color-1;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .col {
+        display: flex;
+        flex: 0.1 1 1;
+    }
+}
+
+.tableActionBtn{
+    cursor: pointer;
+    text-transform: uppercase;
+    color: @color-3;
+    font-size:12px;
+}
+
+.tableContainer{
+    position: relative;
+    .columnSetter{
+        text-align: right;
+        width: 5%;
+        position: absolute;
+        cursor: pointer;
+        top: 0vh;
+        right: 0vw;
+        z-index: 1000;
+    }
+}
+
+.ant-form-item {
+  margin-bottom: 5px;
+}

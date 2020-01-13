@@ -1,0 +1,22 @@
+{
+	"alias":"nexans-api-mock",
+	"version": 2,
+    "name": "nexans-api-mock",
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@now/node-server",
+            "config": { "distDir": "api" }
+        }],
+    "routes": [
+        {
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+            },
+            "src": "/.*",
+            "dest": "/index.js"
+        }
+    ]
+}

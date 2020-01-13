@@ -1,0 +1,97 @@
+@import "../../../common/styles/theme.less";
+
+.subMenuHolder {
+	display: flex;
+    flex: 0.2 1 1;
+    align-items: center;
+    flex-direction: row;
+    padding: 0!important;
+    :global{
+        .ant-menu-horizontal{
+            border-bottom: none!important;
+        }
+    }
+}
+
+.submenuTitle {
+	font-size: 24px;
+	font-family: "SourceSansProRegular";
+	color: #000;
+	text-transform: capitalize;
+}
+
+.subMenu, .textMenu {
+    background: transparent!important;
+    padding-right: 0!important;
+    margin-right: -5px;
+    flex: 0.2 1 1;
+
+	:global {
+		.ant-menu-item {
+      //:first-child, ant adds a submenu as first chiled so we use the second
+			&:nth-child(2) {
+				padding-left: 0!important;
+			}
+			&:nth-last-child(2) {
+				padding-right: 0!important;
+			}
+      &:hover {
+        border-bottom-color: transparent!important;
+        border-bottom: none; //for the bounce effect
+      }
+    }
+    .ant-menu-horizontal > .ant-menu-item-selected,.ant-menu-item-selected{
+      border-bottom: none!important;
+		}
+	}
+}
+
+.textMenu {
+  margin-right: 15px;
+  line-height: 40px;
+  margin-top: -15px;
+}
+
+.menuBtn, .btnDel, .btnPlain, .btnWarn {
+  padding: 0 6px 10px 6px!important;
+	:global(.anticon) {
+		font-size: 16px;
+		background: @color-3;
+		color: white;
+		padding: 13px;
+		border-radius: 23px 23px;
+	}
+}
+.btnDel {
+	:global(.anticon) {
+    background-color: #B2022F;
+  }
+}
+.btnPlain {
+  :global(.anticon) {
+    background-color: #ffffff;
+    color: #777;
+    border: 1px solid #cccccc;
+  }
+}
+
+.btnWarn {
+  :global(.anticon) {
+    background-color: #F4BC1C;
+    color: #777;
+    border: 1px solid #F9C70C;
+  }
+}
+
+.searchBox {
+  margin: -10px 20px 0 0;
+}
+.searchInput {
+  &:focus, &:active, &:hover { // not working
+  :global(input) {
+    outline: none;
+    border-color: rgb(120, 120, 122);
+    box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../common/styles/theme.less';
+
+.nameLocker{
+  justify-content: center;
+  border-top: 1px solid #ddd!important;
+  .lockerContent{
+    height: @main-menu-height;
+    flex:1 1;
+    background: @name-locker-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid @sections-border-color;
+    border-bottom: 1px solid @sections-border-color;
+    .logo{
+      display: flex;
+      flex: 0.25;
+      align-content: center;
+      justify-content: center;
+      // border: 1px solid red;
+    }
+    .siteName{
+      display: flex;
+      flex: 0.6;
+    }
+    .toggler{
+      flex:0.15 1;
+      :global(.anticon){
+        font-size: 20px;
+        color:#777;
+      }
+    }
+  }
+}
+:global(.ant-layout-sider-collapsed){
+  .lockerContent{
+    justify-content: center!important;
+  }
+
+}

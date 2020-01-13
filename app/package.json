@@ -1,0 +1,15 @@
+{
+  "name": "nexans_web",
+  "version": "1.0.0",
+  "description": "P.O.S System with QR code scanning",
+  "main": "dist/main/main.js",
+  "author": {
+    "name": "Joseph Anane"
+  },
+  "dependencies": {
+    "electron-config": "^1.0.0",
+    "electron-debug": "^2.0.0",
+    "electron-is": "^2.4.1",
+    "electron-log": "^2.2.14"
+  }
+}

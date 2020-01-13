@@ -1,0 +1,8 @@
+{
+	"alias":["prosoft-pos.now.sh"],
+	"version": 1,
+    "name": "prosoft-pos",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "app/dist/renderer" } }
+    ]
+}

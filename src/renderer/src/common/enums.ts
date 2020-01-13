@@ -1,0 +1,7 @@
+export enum ProductStatus {
+  SOLD = 'SOLD',
+  DISTRIBUTED = 'DISTRIBUTED',
+  CODE_EXPIRED = 'CODE_EXPIRED',
+  CREATED = 'CREATED',
+  IN_STOCK = 'IN_STOCK',
+}

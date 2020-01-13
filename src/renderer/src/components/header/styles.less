@@ -1,0 +1,121 @@
+@import '../../common/styles/theme.less';
+:global {
+  .ant-layout-header {
+    height: @main-menu-height!important;
+    background: #fff!important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd!important;
+  border-top: 1px solid #ddd!important;
+  .headerRight {
+    float: left;
+    color: rgb(54, 52, 52);
+    min-width: 30%;
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-between;
+    .headerNav {
+      float: left;
+      flex-grow: 8;
+      width: @panel-collapsed-width;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      :global {
+        .ant-menu {
+          background: transparent;
+          border-bottom: none;
+          .ant-menu-item a {
+            color: #777;
+          }
+          .ant-menu-item:hover {
+            border-bottom-color: #555!important;
+            margin-top: 0;
+          }
+          .ant-menu-item-selected {
+            border-bottom-color: #333;
+            a {
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+    .headerRightMenu {
+      float: left;
+      // flex-grow: 2;
+      display: flex;
+      height: @main-menu-height;
+      justify-content: flex-end;
+      align-items: center;
+      padding:0 16px 0 5px;
+      cursor: pointer;
+      .action {
+        cursor: pointer;
+        padding: 0 12px;
+        display: inline-block;
+        transition: all 0.3s;
+        height: @main-menu-height;
+        line-height: @main-menu-height;
+        > i {
+          font-size: 16px;
+          vertical-align: middle;
+          color: @text-color;
+        }
+        &:hover, &:global(.ant-popover-open) {
+          background: @primary-1;
+        }
+      }
+      .account {
+        vertical-align: middle;
+        color: #777;
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        border-left: 1px solid @sections-border-color;
+        &:hover {
+          background: transparent;
+          color: #999;
+        }
+        .avatar {
+          margin: 5px 8px 20px 0;
+          color: @primary-color;
+          background: transparent;
+          vertical-align: middle;
+        }
+        .icon {
+          color: #555;
+          margin-right: 8px;
+          margin-top: -5px;
+          font-size: 14px;
+        }
+        .username{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-transform: capitalize;
+          font-size: 14px;
+          color:rgba(0, 0, 0, 0.65);
+        }
+        .icon:hover {
+          color: #555;
+        }
+      }
+      .menu {
+        :global(.anticon) {
+          margin-right: 8px;
+        }
+        :global(.ant-dropdown-menu-item) {
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+

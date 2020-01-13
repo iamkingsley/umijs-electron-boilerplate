@@ -1,0 +1,86 @@
+.formWr {
+	padding-top: 0;
+	.formInputs {
+		.formInputsInner {
+			padding-top: 0;
+			:global {
+				.ant-card-body {
+					padding: 0;
+				}
+				@media(max-width: 767px) {
+					.ant-card-body {
+						padding-right: 16px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.formModal {
+	top: 50px!important;
+	width: 60%!important;
+	font-family: SEGOEUI;
+	:global {
+		.ant-modal-body {
+			height: 500px;
+			padding: 0;
+		}
+	}
+	.form {
+		display: flex;
+		height: 100%;
+		.formInfo {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 auto;
+			width: 33%;
+			background: #F4F4F4;
+			padding: 24px;
+			color: #777;
+			line-height: 30px;
+			font-size: 14px;
+			align-items: center;
+			justify-content: space-around;
+			:global {
+				.anticon {
+					font-size: 80px;
+				}
+			}
+		}
+		.formInputs {
+			display: flex;
+			flex: 1 0 auto;
+			width: 67%;
+			padding-top: 24px;
+			flex-direction: column;
+			justify-content: space-between;
+			.formInputsInner {
+				padding: 10px 32px;
+				padding-right: 10%;
+				color: #777;
+				:global {
+					.ant-card-body {
+						padding: 16;
+					}
+					.ant-form-item {
+						// width: 100%;
+					}
+					.ant-form-item-control-wrapper {
+						input {
+							font-family: SEGOEUI;
+						}
+					}
+				}
+			}
+			.submitter {
+				padding-right: 10%;
+			}
+		}
+	}
+}
+
+.formModalsm {
+	width: 40%!important;
+}

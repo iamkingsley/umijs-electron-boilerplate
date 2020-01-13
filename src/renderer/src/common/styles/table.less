@@ -1,0 +1,89 @@
+:global {
+    .ant-table-wrapper {
+        background-color: transparent;
+        margin-top: 15px;
+    }
+    .ant-table table {
+        border-collapse: separate!important;
+        border-spacing: 0 1em;
+    }
+    .ant-checkbox{
+        border-spacing: 0!important;
+    }
+    .ant-table-thead > tr > th {
+        background: transparent;
+        color: @color-6;
+        font-size: 13px;
+        padding-bottom: 8px;
+        cursor: pointer;
+        border-bottom: none;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+        }
+        &.ant-table-column-sort{
+            color: @color-7!important;
+        }
+    }
+    .ant-table-tbody > tr {
+        margin-bottom: 16px!important;
+    }
+    .ant-table-tbody > tr:hover > td {
+        box-shadow: 5px 10px 10px @color-2;
+        background: #fff!important;
+        border: none!important;
+    }
+    .ant-table-tbody > tr > td {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border: none;
+        box-shadow: none;
+        font-size: 15px;
+        background: #fff;
+        color:@color-6;
+    }
+    .ant-table-tbody > tr > td:first-child {
+        font-weight: bold;
+        color: #000;
+        border-radius: 3px 0 0 3px;
+    }
+    .ant-table-tbody > tr > td:last-child {
+        border-radius: 0 3px 3px 0;
+    }
+    //sorted th
+    // th.ant-table-column-sort {
+    //     background: initial!important;
+    //     border-bottom-width: 1.5px!important;
+    //     color: @color-6!important;
+    // }
+    // no hover background for th
+    .ant-table-thead > tr > th .ant-table-column-sorters:hover:before, 
+    .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+        background: transparent!important;
+    }
+    //columns that are in sort
+    .ant-table-tbody > tr > td.ant-table-column-sort{
+        background: #fff!important;
+        color:@color-7;
+    }
+    .ant-table-column-sorter-down, .ant-table-column-sorter-up {
+        color: @color-6;
+        font-size: 16px!important;
+        padding: 5px 0;
+        margin-top: -10px;
+    }
+    .ant-table-column-sorter-down.on, .ant-table-column-sorter-up.on {
+        color: @color-3;
+    }
+    .ant-table-column-sorter-down:not(.off), .ant-table-column-sorter-up:not(.off) {
+        display: none;
+    }
+    .columnSetter {
+        text-align: right;
+        width: 5%;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+    }
+}
